@@ -1,0 +1,4 @@
+docker exec -it kafka3 /bin/bash
+kafka-topics --create --topic randomTopic --bootstrap-server localhost:9092 --partitions 3
+docker exec -it spark-master /bin/bash
+spark-submit /spark-app/analysis.py
