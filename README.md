@@ -1,0 +1,2 @@
+# Medical-Information-Retrieval-and-Analysis-System
+This project retrieves and analyzes medical data using NLP and BDA. It features web scraping to collect medicine details, stores data in a Neo4j graph database with Cypher queries, and offers an interactive Streamlit app for querying the database. This system effectively combines web scraping, database management, and NLP for medical data analysis.
