@@ -42,20 +42,17 @@ def main():
     # Initialize HuggingFace embeddings
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     
-
-    if 'MISTRAL_API_KEY' not in os.environ:
-        os.environ['MISTRAL_API_KEY'] = 'ZI0nX0E7J0FWp30XrVSeRbQkOGIj0YDR'
     # Connect to Neo4j Graph
     graph_handler = Neo4jGraphHandler(
         url="neo4j+s://38a7aab1.databases.neo4j.io:7687",
-        username="neo4j",
-        password="tg78gtjnNro6TItGtGAZxaWhg6MZDfOw6Xg0nQ03w50"
+        username=os.environ.get('NEO4J_USER_NAME'),
+        password=os.environ.get('NEO4J_PASSWORD')
     )
     
     graph = Neo4jGraph(
         url="neo4j+s://38a7aab1.databases.neo4j.io:7687",
-        username="neo4j",
-        password="tg78gtjnNro6TItGtGAZxaWhg6MZDfOw6Xg0nQ03w50",
+        username=os.environ.get('NEO4J_USER_NAME'),
+        password=os.environ.get('NEO4J_PASSWORD'),
         database="neo4j"
     )
 
