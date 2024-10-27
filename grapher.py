@@ -27,7 +27,7 @@ class Neo4jGraphHandler:
 def main():
     st.set_page_config(
         layout="wide",
-        page_title="Graphy - Talk to Graphs",
+        page_title="Med-Graphy - Talk to Graphs",
         page_icon=":graph:"
     )
     st.sidebar.image('logo.jpg', use_column_width=True)
