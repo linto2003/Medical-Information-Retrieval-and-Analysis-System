@@ -44,13 +44,13 @@ def main():
     
     # Connect to Neo4j Graph
     graph_handler = Neo4jGraphHandler(
-        url="neo4j+s://38a7aab1.databases.neo4j.io:7687",
+        url="neo4j+s://beaea41d.databases.neo4j.io:7687",
         username=os.environ.get('NEO4J_USER_NAME'),
         password=os.environ.get('NEO4J_PASSWORD')
     )
     
     graph = Neo4jGraph(
-        url="neo4j+s://38a7aab1.databases.neo4j.io:7687",
+        url="neo4j+s://beaea41d.databases.neo4j.io:7687",
         username=os.environ.get('NEO4J_USER_NAME'),
         password=os.environ.get('NEO4J_PASSWORD'),
         database="neo4j"
@@ -131,3 +131,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
